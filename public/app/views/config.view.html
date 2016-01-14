@@ -38,7 +38,7 @@
 					<td>
 						<md-input-container>
 							<label>Data</label>
-							<input type="number" name="Data" ng-model="port.data">
+							<input type="number" name="Data" ng-model="port.data" min="0">
 							<div ng-messages="configNetworkSwitchForm.Data.$error" ng-if="configNetworkSwitchForm.Data.$touched">
 								<div ng-messages-include="/app/views/templates/validation-message.html"></div>
 							</div>
@@ -48,7 +48,7 @@
 					<td>
 						<md-input-container>
 							<label>VLAN</label>
-							<input type="number" name="VLAN" ng-model="port.vlan">
+							<input type="number" name="VLAN" ng-model="port.vlan" min="0">
 							<div ng-messages="configNetworkSwitchForm.VLAN.$error" ng-if="configNetworkSwitchForm.VLAN.$touched">
 								<div ng-messages-include="/app/views/templates/validation-message.html"></div>
 							</div>
