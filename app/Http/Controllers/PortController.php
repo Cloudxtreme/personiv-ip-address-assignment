@@ -80,7 +80,7 @@ class PortController extends Controller
 
             $port->data = $request->input($i.'.data') ? $request->input($i.'.data') : null;
             $port->vlan = $request->input($i.'.vlan') ? $request->input($i.'.vlan') : null;
-            $port->description = $request->input($i.'.description') ? $request->input($i.'.description') : null
+            $port->description = $request->input($i.'.description') ? $request->input($i.'.description') : null;
 
             $port->save();
         }
