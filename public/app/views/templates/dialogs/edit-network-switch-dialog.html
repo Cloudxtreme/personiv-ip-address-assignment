@@ -1,0 +1,40 @@
+<md-dialog layout="column" flex="50"  aria-label="Edit {{ networkSwitch.name }} Network Switch">
+	<form name="editNetworkSwitchForm" novalidate>
+		<md-toolbar>
+			<div class="md-toolbar-tools">
+				<h2 class="white-text">Edit {{ networkSwitch.name }} Network Switch</h2>
+				<span flex></span>
+				<md-button class="md-icon-button" ng-click="cancel()">
+					<md-icon class="mdi mdi-close" aria-label="cancel"></md-icon>
+				</md-button>
+			</div>
+		</md-toolbar>
+		<md-dialog-content layout="column" flex layout-padding>
+			<div layout="row">
+				<!-- Name -->
+				<md-input-container flex>
+					<label>Name</label>
+					<input type="text" ng-model="networkSwitch.name" name="Name" required>
+					<div ng-messages="editNetworkSwitchForm.Name.$error" ng-if="editNetworkSwitchForm.Name.$touched">
+						<div ng-messages-include="/app/views/templates/validation-message.html"></div>
+					</div>
+				</md-input-container>
+			</div>
+			<div layout="row">			
+				<!-- Description -->
+				<md-input-container flex>
+					<label>Description</label>
+					<input type="text" ng-model="networkSwitch.description" name="Description">
+					<div ng-messages="editNetworkSwitchForm.Description.$error" ng-if="editNetworkSwitchForm.Description.$touched">
+						<div ng-messages-include="/app/views/templates/validation-message.html"></div>
+					</div>
+				</md-input-container>			
+			</div>
+		</md-dialog-content>
+	</form>
+	<div layout="row" layout-align="end center">		
+		<md-button class="md-fab md-accent" aria-label="Submit" ng-click="submit()">
+			<md-icon class="mdi mdi-check"></md-icon>
+		</md-button>
+	</div>
+</md-dialog>	

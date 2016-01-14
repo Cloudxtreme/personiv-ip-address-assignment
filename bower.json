@@ -1,0 +1,28 @@
+{
+  "name": "personiv-ip-address-assignment",
+  "authors": [
+    "Marco Paco <marcopaco1230@gmail.com>"
+  ],
+  "description": "ip address management for local servers",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-material": "~1.0.1",
+    "angular-ui-router": "~0.2.15",
+    "ngInfiniteScroll": "~1.2.1",
+    "jquery": "~2.2.0",
+    "mdi": "~1.4.57",
+    "angular-messages": "~1.4.8",
+    "bootstrap": "~3.3.6"
+  }
+}

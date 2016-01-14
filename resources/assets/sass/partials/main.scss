@@ -1,0 +1,232 @@
+/* Text Colors Classes */
+.primary-text {
+	/* Teal */
+	color: $primary500;
+}
+
+.accent-text {
+	/* Light Green */
+	color: $accentA700;
+}
+
+.white-text {
+	/* White */
+	color: #fff;
+}
+
+.main-text {
+	/* Dark Text */
+	color: $main-text;
+}
+
+.secondary-text {
+	/* Grey Text */
+	color: $secondary-text;
+}
+
+/* Text Alignments */
+.left-text {
+	text-align: left;
+}
+
+.center-text {
+	text-align: center;
+}
+
+.right-text {
+	text-align: right;
+}
+
+/* Font Weights*/
+.weight-300{
+	font-weight: 300;
+}
+
+.weight-200{
+	font-weight: 200;
+}
+
+.weight-100{
+	font-weight: 100;
+}
+
+.main-view {
+	/* main ui-router view */
+	min-height: 80vh;
+	position: relative;
+	overflow: auto;
+}
+
+/* Stretch to full height */
+.full-height-min {
+	min-height: 80vh;
+}
+/* Max height 100% of viewport*/
+.full-height-max {
+	max-height: 80vh;
+}
+
+.full-width-min{
+	min-width: 100%;
+}
+
+/* Toolbar Background */
+md-toolbar.white-toolbar {
+	background-color: white;
+}
+
+.navbar-brand {
+	padding: 10px;
+	img{
+		max-height: 100%;
+	}
+}
+
+.personiv-logo {
+	height:110px;
+}
+
+.hidden-custom{
+	opacity: 0;
+}
+
+#main{
+	background: url('/assets/img/EASNZXBH4G.jpg');
+	background-size: cover;
+	transition: all 1s;
+}
+
+.main-content{
+	background: rgba(#212121, 0.3);
+}
+
+/* Background colors */
+md-content.dirty-white{
+	background: #eeeeee;
+}
+
+md-content.primary-bg{
+	background: $primary500;
+}
+
+.primary-bg{
+	background: $primary500;
+}
+
+.blur-white{
+	background: rgba(white,0.1);
+}
+
+.copyrights{
+	min-height: 110px;
+	width:100%;
+	text-align: center;
+	color: $secondary-text;
+	padding: 15px 0px;
+	border-top: 1px solid #eee;
+}
+
+.left-border{
+	border-left: 1px solid rgba(0,0,0,0.12);
+}
+
+.form{
+	width: 300px;
+}
+
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none !important;
+}
+
+.md-button.md-fab.z-index-75{
+	z-index: 75;
+}
+
+.blue-border-left{
+	border-left: 2px solid $primary500;
+}
+
+.progress-dialog{
+	background: transparent;
+	box-shadow: none;
+}
+
+.md-datepicker-calendar{
+	background: white;
+}
+
+.md-calendar-day-header{
+	background: $primary500;
+	color: white;
+}
+
+.datepicker.dropdown-menu {
+  width: 250px;
+  height: 250px;
+  button {
+    outline: none;
+    border: 0px;
+  }
+  tbody {
+    height: 180px;
+  }
+  tbody button {
+    padding: 6px;
+  }
+  &.datepicker-mode-1, &.datepicker-mode-2 {
+    tbody button {
+      height: 65px;
+    }
+  }
+}
+
+.timepicker.dropdown-menu {
+  padding: 0 4px;
+  button {
+    outline: none;
+    border: 0px;
+  }
+  tbody button {
+    padding: 6px;
+  }
+}
+
+.pattern{
+	position: absolute;
+	font-size: 12px;
+	color: $red500;
+	line-height: 24px;
+}
+
+.navbar-inverse  > li > a:hover, .navbar-inverse .navbar-nav > li > a:hover{
+	color: $accentA700;
+}
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+	color: $accentA700;
+}
+
+.btn-accent{
+	background-color: $accentA700;
+	color: white;
+	&:hover{
+		color:white;
+	}
+}
+
+.round{
+	border-radius: 50%;
+}
+
+.accent-bg{
+	background-color: $accentA700;
+}
+
+
+md-toolbar.md-default-theme:not(.md-menu-toolbar) md-icon, md-toolbar:not(.md-menu-toolbar) md-icon {
+	color: white;
+}
+
+a.md-button.md-default-theme.md-accent.md-raised:not([disabled]) md-icon, a.md-button.md-accent.md-raised:not([disabled]) md-icon, a.md-button.md-default-theme.md-accent.md-fab:not([disabled]) md-icon, a.md-button.md-accent.md-fab:not([disabled]) md-icon, .md-button.md-default-theme.md-accent.md-raised:not([disabled]) md-icon, .md-button.md-accent.md-raised:not([disabled]) md-icon, .md-button.md-default-theme.md-accent.md-fab:not([disabled]) md-icon, .md-button.md-accent.md-fab:not([disabled]) md-icon{
+	color: white;
+}

@@ -1,0 +1,34 @@
+<md-content class="full-height-max" flex>
+	<div class="container">
+		<div layout="row" flex layout-wrap ng-if="show">
+			<md-card flex flex-md="45" flex-gt-md="30" ng-repeat="networkSwitch in networkSwitches">
+		        <md-card-title>
+			        <md-card-title-text>
+			            <span class="md-headline">{{ networkSwitch.name }}</span>
+			            <span class="md-subhead">{{ networkSwitch.description }}</span>
+			            <span class="md-subhead" ng-if="!networkSwitch.description">No description.</span>
+			        </md-card-title-text>
+			        <md-card-title-media>
+			            <div class="md-media-sm card-media accent-bg round" layout="row" layout-align="center center">
+			            	<span class="md-display-3 white-text">{{ networkSwitch.first_letter }}</span>
+			            </div>
+			        </md-card-title-media>
+		        </md-card-title>
+		        <md-card-actions layout="row" layout-align="end center">
+		        	<md-button class="md-icon-button" ng-click="editNetworkSwitch(networkSwitch.id)">
+						<md-icon class="mdi mdi-pencil grey" aria-label="Edit"></md-icon>
+						<md-tooltip>Edit</md-tooltip>
+		        	</md-button>
+		        	<md-button class="md-icon-button" ng-click="configSwitch(networkSwitch.id)">
+						<md-icon class="mdi mdi-settings grey" aria-label="Configuration"></md-icon>
+						<md-tooltip>Configuration</md-tooltip>
+		        	</md-button>
+		        </md-card-actions>
+		    </md-card>
+		</div>
+	</div>
+</md-content>
+<md-button class="md-fab md-fab-bottom-right md-accent" ng-click="addNetworkSwitch()">
+	<md-icon class="mdi mdi-plus" aria-label="Add Network Switch"></md-icon>
+	<md-tooltip>Add Network Switch</md-tooltip>
+</md-button>

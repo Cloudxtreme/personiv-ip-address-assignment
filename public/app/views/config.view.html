@@ -1,0 +1,75 @@
+<div class="container">
+	<md-content layout="row" layout-align="space-between center">
+		<md-list>
+	      	<md-list-item class="md-2-line">
+		        <h2 class="md-avatar md-headline accent-bg" layout="row" layout-align="center center">
+					<span class="weight-200 white-text">{{ switch.first_letter }}</span>
+				</h2>
+		        <div class="md-list-item-text" layout="column">
+		          	<h3>{{ switch.name }}</h3>
+		          	<h4>{{ switch.description }}</h4>
+		        </div>
+	      	</md-list-item>
+	  	</md-list>
+		<div layout="row" layout-align="center center">		
+			<md-input-container>
+				<label>Search</label>
+				<input type="text" ng-model="userInput">
+			</md-input-container>
+		</div>
+
+	</md-content>
+</div>
+<md-content class="full-height-max" flex>
+	<div class="container">
+		<table class="table">
+			<tr>
+				<th>Port</th>
+				<th>Data</th>
+				<th>VLAN</th>
+				<th>Description</th>
+			</tr>
+			<form name="configNetworkSwitchForm" novalidate>
+				<tr ng-repeat="port in ports | filter:userInput">
+					<td layout="row">
+						{{ port.name }}
+					</td>
+					<!-- Data -->
+					<td>
+						<md-input-container>
+							<label>Data</label>
+							<input type="number" name="Data" ng-model="port.data">
+							<div ng-messages="configNetworkSwitchForm.Data.$error" ng-if="configNetworkSwitchForm.Data.$touched">
+								<div ng-messages-include="/app/views/templates/validation-message.html"></div>
+							</div>
+						</md-input-container>
+					</td>
+					<!-- VLAN -->
+					<td>
+						<md-input-container>
+							<label>VLAN</label>
+							<input type="number" name="VLAN" ng-model="port.vlan">
+							<div ng-messages="configNetworkSwitchForm.VLAN.$error" ng-if="configNetworkSwitchForm.VLAN.$touched">
+								<div ng-messages-include="/app/views/templates/validation-message.html"></div>
+							</div>
+						</md-input-container>
+					</td>
+					<!-- Description -->
+					<td>
+						<md-input-container>
+							<label>Description</label>
+							<input type="text" name="Description" ng-model="port.description">
+							<div ng-messages="configNetworkSwitchForm.Description.$error" ng-if="configNetworkSwitchForm.Description.$touched">
+								<div ng-messages-include="/app/views/templates/validation-message.html"></div>
+							</div>
+						</md-input-container>
+					</td>
+				</tr>
+			</form>
+		</table>
+	</div>
+</md-content>
+<md-button class="md-fab md-fab-top-right md-accent" ng-click="submit()">
+	<md-icon class="mdi mdi-content-save" aria-label="Save Changes"></md-icon>
+	<md-tooltip>Save Changes</md-tooltip>
+</md-button>
