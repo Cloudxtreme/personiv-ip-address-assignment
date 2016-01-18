@@ -118,6 +118,10 @@ class NetworkSwitchController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // deletes the network switch records.
+        NetworkSwitch::where('id', $id)->delete();
+
+        // and its ports
+        Port::where('network_switch_id')->delete();
     }
 }

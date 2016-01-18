@@ -178,6 +178,27 @@ adminModule
 		    });
 		};
 
+		$scope.deleteSwitch = function(id){
+			var confirm = $mdDialog.confirm()
+		        .title('Delete Network Switch?')
+		        .textContent('All records will be deleted permanently.')
+	          	.ariaLabel('Delete Network Switch')
+		        .ok('Delete')
+		        .cancel('Cancel');
+		    $mdDialog.show(confirm).then(function() {
+		    	NetworkSwitch.delete(id)
+		    		.success(function(){
+		    			$scope.refresh();	
+		    		})
+		    		.error(function(){
+		    			Preloader.error();
+		    		});
+
+		    }, function() {
+		    	return;
+		    });
+		}
+
 		$scope.configSwitch = function(id){
 			$state.go('config', { networkSwitchID:id });
 		};
